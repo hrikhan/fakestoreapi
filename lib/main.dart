@@ -11,7 +11,8 @@ class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-home: shoppinghomepage(),
+      debugShowCheckedModeBanner: false,
+home: ShopingPage(),
     );
 
 
