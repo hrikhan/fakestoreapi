@@ -16,6 +16,8 @@ class ShopingController extends GetxController {
   bool isloading = false;
   bool iscatagoriesfound = false;
   bool justcatagoriesfound = false;
+  bool postloading =false;
+
 
 
   @override
@@ -38,13 +40,14 @@ class ShopingController extends GetxController {
           products.add(product.fromJson(productdata[i]));
         }
 
+
         isloading = false;
 
         print(products);
         update();
       }
     } catch (e) {
-      print(e);
+      print("data not found");
     }
   }
 
@@ -79,5 +82,15 @@ class ShopingController extends GetxController {
 
       }
     }
-  }
+
+
+      try{
+        isloading=true;
+
+      }
+
+      }
+      catch(e){
+
+      }
 }
