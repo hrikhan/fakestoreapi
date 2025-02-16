@@ -1,3 +1,4 @@
+import 'package:api/adding_product.dart';
 import 'package:api/detailspage.dart';
 import 'package:api/product_model.dart';
 import 'package:api/shimmar.dart';
@@ -192,6 +193,15 @@ class ShopingPage extends StatelessWidget {
               ),
             ],
           ),
-        ));
+        ),
+    floatingActionButton: FloatingActionButton(onPressed: (){
+      Get.to(addproduct());
+      
+      
+      
+    },
+      child: Icon(Icons.add),
+    ),
+    );
   }
 }

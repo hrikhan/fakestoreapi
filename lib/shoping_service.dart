@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 
 class Homeservice {
@@ -18,4 +20,15 @@ class Homeservice {
     http.Response response = await http.get(Uri.parse(url));
     return response;
   }
+  Future<http.Response> postproduct(Map<String,dynamic> product) async{
+    String url="https://fakestoreapi.com/products";
+   http.Response response=await http.post(Uri.parse(url),body:json.encode(product));
+
+return response;
+
+
+  }
+
+
+
 }
